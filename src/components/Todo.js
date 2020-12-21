@@ -25,13 +25,16 @@ function Todo({todos, completeTodo, removeTodo, updateTodo}) {
         <div 
             className={todo.isComplete ? 'todo-row complete':'todo-row'} 
             key={index}
-        >    
+        >
             <div 
                 key={todo.id}
                 onClick={()=> completeTodo(todo.id)}
             >
+                
                 {todo.text}
-             </div>      
+                
+             </div>  
+                 
              <div 
                 className="icons">
                 <RiCloseCircleLine 
