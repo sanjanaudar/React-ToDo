@@ -15,5 +15,8 @@ COPY . .
 # Describe the port your application is listening to
 EXPOSE 3000
 
+# Healthcheck
+HEALTHCHECK CMD curl -fsSL http://localhost:3000 || exit 1
+
 # Command to run your application
 CMD ["npm", "start"]
